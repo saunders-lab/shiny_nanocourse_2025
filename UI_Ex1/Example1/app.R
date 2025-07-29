@@ -29,7 +29,7 @@ ui <- fluidPage(
   ## 4. Define an output function for plotting the histogram
   
   ## 5. Define an output function to print the number selected by the user 
-  ##   Keep in mind that renderPrint() was used for printing
+  ##   Keep in mind that renderPrint() was used for printing in the server code
   ##  use the appropriate function that works with renderPrint()
   
   ## 6. Define an output function to show the dataset selected as a Table on the screen
