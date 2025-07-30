@@ -32,7 +32,8 @@ df_cells <- tibble(hrs = 1:24) %>%
 df_cells
 
 # Plot logistic growth of mock cells
-ggplot(df_cells, aes(x = hrs, y = cells)) + geom_point()
+ggplot(df_cells, aes(x = hrs, y = cells)) + 
+  geom_point()
 
 
 #### Code for App #2 below
@@ -52,5 +53,7 @@ df_cells_pred <- df_cells %>%
 df_cells_pred
 
 # Plot original data alongside predictions
-ggplot(df_cells_pred, aes(x = hrs)) + geom_point(aes(y = cells)) + geom_line(aes(y = pred), color = 'blue', size = 1)
+ggplot(df_cells_pred, aes(x = hrs)) + 
+  geom_point(aes(y = cells)) + 
+  geom_line(aes(y = pred), color = 'blue', size = 1)
 
