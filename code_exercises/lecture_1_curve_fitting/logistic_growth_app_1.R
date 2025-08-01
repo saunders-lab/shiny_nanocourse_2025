@@ -1,19 +1,13 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    https://shiny.posit.co/
-#
-
-# Code example: curve fitting 1
-# Fill in the "..." "sections below to create an app that generates a logistic growth data.
-# The app should take in logistic parameters as inputs and display the data as a plot.
 
 library(shiny)
 library(tidyverse)
 library(modelr)
+
+
+# Code example: curve fitting 1
+# Fill in the "..." "sections below to create an app that generates a logistic growth curve.
+# The app should take in logistic parameters as inputs and display the data as a plot.
+
 
 # Write a function to generate logistic curve data with noise
 gen_logis <- function(input, Asym = 100, xmid = 12, scal = 3, noise_sd = 5){
@@ -38,11 +32,10 @@ ui <- fluidPage(
     sidebarLayout(
         sidebarPanel(
           
-          ### Add inputs here ###
+          ### TODO: Add a "noise" input here ###
           
-          # sliderInput("Asym")
+          #sliderInput(...)
           
-          # numericInput(...)
           
         ),
 
