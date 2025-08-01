@@ -1,5 +1,5 @@
 # ───────────────────────────────────────────────────────────
-# UNIFIED SHINY EXERCISE  –  ORIGINAL LOGIC
+# SHINY EXERCISE Lecture 3 
 # ───────────────────────────────────────────────────────────
 library(shiny)
 #library(ggplot2)
@@ -70,4 +70,5 @@ server <- function(input, output, session){
 
 # --------------------  RUN APP  -----------------------------
 shinyApp(ui, server)
+
 
