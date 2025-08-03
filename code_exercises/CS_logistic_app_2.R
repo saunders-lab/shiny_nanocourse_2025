@@ -1,11 +1,21 @@
+# -------------------------------------------------------------------------#
+# SHINY EXERCISE 
+# -------------------------------------------------------------------------#
+#  Case study – Shiny workflow practice, part 2
 #
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
+#  GOAL: Translate the static analysis CS_logistic_static_analysis.R into an app.
+#  Building in complexity, your goal is to advance the CS_logistic_app_1 to now
+#  fit the generated logistic data and present the model estimates in a new tab.
 #
-# Find out more about building applications with Shiny here:
+#  What’s provided:
+#    -The solution to CS_logistic_app_1 is provided, now with TODOs and hints
 #
-#    https://shiny.posit.co/
+#  How to proceed:
+#    1. Fill in *TODO-1* through *TODO-4* using the hints.
+#    2. Click “Run App” and test after each step.
 #
+#  Have fun and watch the app come to life!
+# -------------------------------------------------------------------------#
 
 library(shiny)
 library(tidyverse)
@@ -28,7 +38,7 @@ gen_logis <- function(input, Asym = 100, xmid = 12, scal = 3, noise_sd = 5){
 ui <- fluidPage(
 
     # Application title
-    titlePanel("Logistic growth curve fitting"),
+    titlePanel("Logistic growth curve fitting 2"),
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
@@ -58,7 +68,8 @@ ui <- fluidPage(
         # Show a plot of the generated distribution
         mainPanel(
           
-          #verbatimTextOutput("cells_data")
+          ## TODO-1: Convert the UI to have two tabs, one for the plot output and one for the model estimates (probably verbatimTextOutput)
+          
           plotOutput("cells_plot")
         )
     )
@@ -67,15 +78,25 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
   
-  #output$cells_data <- renderPrint({  
+  ## TODO-2: Restructure the server with two reactives, one for the data, df_cells, and one for the model, mod_logis
+  # Each of these are needed in both the plot output and the model estimates output, so we need reactives to do this correctly
+  
+  #df_cells <- reactive()
+  
+  #mod_logis <- reactive()
+  
   output$cells_plot <- renderPlot({  
     
+    ## TODO-3: You will need to modify this to now add the model predictions to the dataframe and plot them
     df_cells <- tibble(hrs = 1:24) %>% 
       mutate(cells = gen_logis(hrs, input$Asym, input$xmid, input$scal, input$noise_sd))
     
     ggplot(df_cells, aes(x = hrs)) + geom_point(aes(y = cells))
     
     })
+  
+  ## TODO-4: Define an output for the model estimates, probably renderPrint.
+  
   
 }
 

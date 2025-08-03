@@ -1,13 +1,26 @@
+# -------------------------------------------------------------------------#
+# SHINY EXERCISE 
+# -------------------------------------------------------------------------#
+#  Case study – Shiny workflow practice, part 1
+#
+#  GOAL: Translate the static analysis CS_logistic_static_analysis.R into an app.
+#  Starting simple, your first goal is to make an app that generates and plots
+#  logistic data according to user inputs
+#
+#  What’s provided:
+#    -The UI structure is largely defined
+#    -The gen_logis function from the static analysis is already defined here
+#
+#  How to proceed:
+#    1. Fill in *TODO-1* through *TODO-3* using the hints.
+#    2. Click “Run App” and test after each step.
+#
+#  Have fun and watch the app come to life!
+# -------------------------------------------------------------------------#
 
 library(shiny)
 library(tidyverse)
 library(modelr)
-
-
-# Code example: curve fitting 1
-# Fill in the "..." "sections below to create an app that generates a logistic growth curve.
-# The app should take in logistic parameters as inputs and display the data as a plot.
-
 
 # Write a function to generate logistic curve data with noise
 gen_logis <- function(input, Asym = 100, xmid = 12, scal = 3, noise_sd = 5){
@@ -32,18 +45,22 @@ ui <- fluidPage(
     sidebarLayout(
         sidebarPanel(
           
-          ### TODO: Add a "noise" input here ###
+          ### TODO-1: Add inputs for the gen_logis() arguments:
+          #   - Asym
+          #   - xmid
+          #   - scal
+          #   - noise_sd
           
-          #sliderInput(...)
+          # for example: sliderInput('noise_sd')
           
           
         ),
 
-        # Show a plot of the generated distribution
+        # Show a plot
         mainPanel(
           
 
-          ### Add plot here ###
+          ### TODO-2: Add plot here ###
           ### Make sure to refer to your plot name here!
           
           # plotOutput(...)
@@ -56,7 +73,7 @@ ui <- fluidPage(
 server <- function(input, output) {
   
   
-  ### Define data and plot inside renderPlot ###
+  ### TODO-3: Define data and plot inside renderPlot ###
   ### Make sure to give your output plot a name!
   
   # output$... <- renderPlot({  
