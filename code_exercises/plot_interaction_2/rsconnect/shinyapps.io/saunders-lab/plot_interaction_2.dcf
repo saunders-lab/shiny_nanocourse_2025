@@ -1,0 +1,12 @@
+name: plot_interaction_2
+title: plot_interaction_2
+username: saunders-lab
+account: saunders-lab
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15150747
+bundleId: 10712259
+url: https://saunders-lab.shinyapps.io/plot_interaction_2/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
