@@ -16,8 +16,7 @@ TAs: Ermis-Ioannis Michail Delopoulos & Sriya Veerapaneni
 Day 1: Shiny core concepts
 
 - Lecture 1: Overview
-  - *Code exercise: Hello world*
-  - *Code exercise: Logistic growth 1*
+  - *Code exercise:* [L1_hello_github](/code_exercises/L1_hello_github_app.R)
  
 - Lecture 2: User Interface (UI)
   - *Code exercise: *
@@ -26,7 +25,11 @@ Day 1: Shiny core concepts
 - Lecture 3: Server
   - *Code exercise: *
   - *Code exercise: *
- 
+
+- Case study: Curve fitting
+  - *Code exercise:* [CS_logistic_app_1](/code_exercises/CS_logistic_app_1.R)
+  - *Code exercise:* [CS_logistic_app_2](/code_exercises/CS_logistic_app_2.R)
+
 Day 2: Shiny extras and deployment
 
 - Lecture 4: Interactive plotting & extras
