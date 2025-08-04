@@ -19,12 +19,11 @@ Day 1: Shiny core concepts
   - *Code exercise:* [L1_hello_github](/code_exercises/L1_hello_github_app.R)
  
 - Lecture 2: User Interface (UI)
-  - *Code exercise: *
-  - *Code exercise: *
+  - *Code exercise:* [L2_example_1](/code_exercises/L2_example_1_app.R)
+  - *Code exercise:* [L2_example_2](/code_exercises/L2_example_2_app.R)
 
 - Lecture 3: Server
-  - *Code exercise: *
-  - *Code exercise: *
+  - *Code exercise:* [L3_example_1](/code_exercises/L3_example_app.R)
 
 - Case study: Curve fitting
   - *Code exercise:* [CS_logistic_app_1](/code_exercises/CS_logistic_app_1.R)
@@ -33,9 +32,6 @@ Day 1: Shiny core concepts
 Day 2: Shiny extras and deployment
 
 - Lecture 4: Interactive plotting & extras
-  - *Code exercise: *
-  - *Code exercise: *
  
 - Lecture 5: Deployment
-  - *Code exercise: *
-  - *Code exercise: *
+
