@@ -50,7 +50,7 @@ server <- function(input, output) {
     
     ## TODO-1: Reformat base old faithful histogram to ggplot code
     
-    ggplot(faithful, aes(x = waiting)) + geom_histogram(bins = input$bins) + theme_classic() + labs(x = 'A better X axis title') + title("A better plot title")
+    ## ggplot(faithful, aes(x = waiting)) + geom_histogram(bins = input$bins) 
     
     
     ## Bonus TODO: Make the plot prettier!
