@@ -37,4 +37,4 @@ Day 2: Shiny extras and deployment
 
 - Lecture 5: Deployment
   - *Code demo:* Deploy to [shinyapps.io](https://www.shinyapps.io/)
-  - *Code demo:* [Shinylive_example](/shinylive/logistic_2_shinylive)
+  - *Code demo:* [Shinylive_example](/shinylive)
