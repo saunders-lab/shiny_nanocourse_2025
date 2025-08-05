@@ -26,12 +26,15 @@ Day 1: Shiny core concepts
   - *Code exercise:* [L3_example_1](/code_exercises/L3_example_app.R)
 
 - Case study: Curve fitting
-  - *Code exercise:* [CS_logistic_app_1](/code_exercises/CS_logistic_app_1.R)
-  - *Code exercise:* [CS_logistic_app_2](/code_exercises/CS_logistic_app_2.R)
+  - *Code exercise:* [CS_logistic_1](/code_exercises/CS_logistic_app_1.R)
+  - *Code exercise:* [CS_logistic_2](/code_exercises/CS_logistic_app_2.R)
 
 Day 2: Shiny extras and deployment
 
 - Lecture 4: Interactive plotting & extras
- 
-- Lecture 5: Deployment
+  - *Code exercise:* [L4_logistic_files](/code_exercises/L4_logistic_files_app.R)
+  - *Code demo:* [L4_plotly_ggiraph_demo](/code_exercises/L4_plotly_ggiraph_demo_app.R)
 
+- Lecture 5: Deployment
+  - *Code demo:* Deploy to [shinyapps.io](https://www.shinyapps.io/)
+  - *Code demo:* [Shinylive_example](/shinylive/logistic_2_shinylive)
