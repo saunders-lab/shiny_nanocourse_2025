@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------#
-# SHINY EXERCISE - ***SOLVED VERSION***
+# SHINY EXERCISE 
 # -------------------------------------------------------------------------#
 #  Case study – Shiny workflow practice, part 3
 #
@@ -9,6 +9,7 @@
 #
 #  What’s provided:
 #    -The solution to CS_logistic_app_2 has been refactored to help you construct this app 3.
+#    -Use the csv file 'L4_logistic_data_Asym100_xmid12_scal2_noise3.csv' to test the app
 #
 #  How to proceed:
 #    1. Fill in *TODO-1* through *TODO-6* using the hints.
