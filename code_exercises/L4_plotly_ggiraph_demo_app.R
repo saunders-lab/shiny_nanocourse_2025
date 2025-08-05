@@ -1,11 +1,7 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    https://shiny.posit.co/
-#
+## 
+## Shiny Demo App - Plot interactivity with libraries plotly & ggiraph 
+## Explore the code below to get a feel for these advanced interactive plotting libraries
+## And see how we can get plot inputs from these libraries, similar to ggplot2/base.
 
 library(shiny)
 library(tidyverse)
@@ -22,11 +18,11 @@ ui <- fluidPage(
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-      numericInput("bins",
-                   "Number of bins:",
+      sliderInput("max_wait",
+                   "Max waiting time:",
                    min = 1,
-                   max = 50,
-                   value = 30)
+                   max = 100,
+                   value = 100)
     ),
     
     # Show a plot of the generated distribution
@@ -50,28 +46,27 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
   
+  #Plotly selected example
   output$plot_info <- renderPrint({
-    #input$plot_click
-    
-    #nearPoints(faithful, input$plot_brush)
-    
-    #brushedPoints(faithful, input$plot_brush)
     
     event_data('plotly_brushed')
     
     
   })
   
+  #Ggiraph selected example
   output$plot_info2 <- renderPrint({
     
     input$distPlot2_selected
     
-    
   })
   
+  #Plotly plot example
   output$distPlot <- renderPlotly({
     
-    plot <- ggplot(faithful, aes(x = waiting,y= eruptions)) + geom_point()
+    plot <- ggplot(faithful%>% filter(waiting<input$max_wait),
+                   aes(x = waiting,y= eruptions)) + 
+      geom_point()
     
     ggplotly(plot)
     
@@ -80,7 +75,10 @@ server <- function(input, output) {
   
   output$distPlot2 <- renderGirafe({
     
-    plot2 <- ggplot(faithful, aes(x = waiting,y= eruptions, label = waiting, data_id = waiting)) + geom_point_interactive()
+    #Ggiraph plot example
+    plot2 <- ggplot(faithful %>% filter(waiting<input$max_wait), 
+                    aes(x = waiting,y= eruptions, label = waiting, data_id = waiting)) + 
+      geom_point_interactive()
     
     
     girafe(ggobj = plot2)
